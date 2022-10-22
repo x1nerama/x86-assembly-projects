@@ -1,13 +1,9 @@
 section .data 
-    msg: db "Numbers are equal", 25
-    str: equ $ - msg
+    msg1: db "Numbers are equal ", 15
+    str1: equ $ - msg1
 
-    msg2: db "Numbers are not equal ", 25
-
-
-section .bss   
-    var1:       resb 4
-
+    msg2: db "Numbers are not equal ", 15
+    str2: equ $ - msg2
 
 section .text 
     global _start
@@ -23,7 +19,7 @@ notEqual:
     mov eax,4
     mov ebx,1
     mov ecx,msg2
-    mov edx,25
+    mov edx,str2
     int 0x80
 
     mov eax,1
@@ -33,12 +29,10 @@ notEqual:
 equal:
     mov eax,4
     mov ebx,1
-    mov ecx,msg
-    mov edx,str
+    mov ecx,msg1
+    mov edx,str1
     int 0x80
 
     mov eax,1
     mov ebx,0
     int 0x80
-
-    ;
