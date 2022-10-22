@@ -1,1 +1,1 @@
-# x86-assembly-note
+## This repository takes simple x86 linux assembly projects
