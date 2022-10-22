@@ -19,6 +19,7 @@ _start:
         int 0x80
 
 readName:
+        ; read user's input
         mov eax,3
         mov ebx,1
         mov ecx,name
@@ -27,6 +28,7 @@ readName:
         ret
 
 askName: 
+        ; ask for name
         mov eax,4
         mov ebx,1
         mov ecx,input
@@ -36,6 +38,7 @@ askName:
 
 
 printName:
+       ; print name
     mov eax,4
     mov ebx,1
     mov ecx,name
