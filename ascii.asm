@@ -1,3 +1,5 @@
+; ASCII Table kullanılarak "beko" kelimesi yazdıran asm projesi (basic project)
+
 section .bss
 	var1: resb 4 
 
