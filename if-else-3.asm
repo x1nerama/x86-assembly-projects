@@ -1,3 +1,5 @@
+; Kullanicidan aldigi 2 degerin ikisi arasinda buyuk mu kucuk mu oldugunu karsilastiran assembly programi 
+
 section .data
 	input1:	db "1.Sayiyi Giriniz: ",10
 	str1:	equ $ - input1
