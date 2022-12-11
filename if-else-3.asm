@@ -7,10 +7,10 @@ section .data
 	input2: db "2.Sayiyi Giriniz: ",10
 	str2:	equ $ - input2
 	
-	msg1:	db "nm1 > nm2", 10
+	msg1:	db "1.Sayi, 2.Sayidan buyuk", 10
 	str3:	equ $ - msg1
 
-	msg2:	db "nm2 > nm1", 10
+	msg2:	db "2.Sayi, 1.Sayidan buyuk", 10
 	str4:	equ $ - msg2
 
 section .bss
