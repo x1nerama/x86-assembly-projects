@@ -1,4 +1,4 @@
-; iki sayinin birbirinden buyuk veya kucuk oldugunu belirten assembly uygulamasi
+; Assembly Program to show which of two numbers is greater or less
 
 
 section .data
