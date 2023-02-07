@@ -2,10 +2,10 @@
 
 
 section .data
-	msg1: 	db "nm1 > nm2", 10
+	msg1: 	db "nm1 > nm2", 15
 	str1: equ $ - msg1
 
-	msg2:	db "nm2 > nm1", 10
+	msg2:	db "nm2 > nm1", 15
 	str2: equ $ - msg2
 	
 section .text
