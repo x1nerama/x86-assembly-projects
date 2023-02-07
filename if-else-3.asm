@@ -14,8 +14,8 @@ section .data
 	str4:	equ $ - msg2
 
 section .bss
-	var1:	resb 4
-	var2:	resb 4
+	var1:	resb 5
+	var2:	resb 5
 
 section .text
 	global _start
