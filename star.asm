@@ -1,3 +1,17 @@
+; Author: devTBenoth
+; This program lists stars according to the given value
+; For example, if we consider that we give 5 to ecx, the output of the program will be as follows:
+; *
+; **
+; ***
+; ****
+; *****
+; ****
+; ***
+; **
+; *
+; After increasing the number of stars according to the value you give, the program decreases the ecx value until it reaches 1.
+
 section .bss
   	var: resb 32
 
