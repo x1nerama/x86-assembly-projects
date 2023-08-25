@@ -1,0 +1,65 @@
+section .data
+	inputMsg: db "Enter a Binary: ",0x0A
+	inputLen: equ $ - inputMsg
+
+section .bss
+	binary: resb 32
+    	currentBinaryLocation: resb 32
+    	loopCounter: resb 32
+
+section .text
+    global _start
+
+_start:
+	mov eax,4
+	mov ebx,1
+	mov ecx,inputMsg
+	mov edx,inputLen
+	int 0x80
+
+	mov eax,3
+	mov ebx,1
+	mov ecx,binary
+	mov edx,32
+	int 0x80
+
+	mov ecx,0
+	mov edi,binary
+	jmp _loop
+
+_exit:
+	mov eax,1
+	xor ebx,ebx
+	int 0x80
+
+_nextBinary:
+	inc ecx
+_loop:
+	cmp byte [edi + ecx],0
+	je _exit
+
+	cmp byte [edi + ecx],'1'
+	jg _nextBinary
+
+	cmp byte [edi + ecx],'0'
+	je _nextBinary
+
+	call _printOneBinary
+	mov ecx,[loopCounter]
+	mov dl,byte [currentBinaryLocation]
+	mov byte [edi + ecx],dl
+	inc ecx
+	
+	jmp _loop
+
+_printOneBinary:
+	mov dl,byte [edi + ecx]
+	mov [currentBinaryLocation],dl
+	mov [loopCounter],ecx
+	
+	mov eax,4
+	mov ebx,1
+	mov ecx,currentBinaryLocation
+	mov edx,32
+	int 0x80
+	ret
