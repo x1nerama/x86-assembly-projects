@@ -2,7 +2,7 @@
 ;    *                                                                               *
 ;    *  A program that converts user-entered data to integer in x86 Linux assembly.  *
 ;    *                                                                               *
-;    *                            author: amaym0nn                                   *
+;    *                            author: x1nerama                                   *
 ;    *                                                                               *
 ;    *********************************************************************************
 
